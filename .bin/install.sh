@@ -1,5 +1,5 @@
-function dotfiles{
-	/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME $@
+function dotfiles {
+	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
 mkdir -p .dotfiles-backup
 if [ $? = 0 ]; then
