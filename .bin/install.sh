@@ -1,3 +1,9 @@
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install our brew packages
+brew bundle --file=.bin/Brewfiles
+
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -17,6 +23,3 @@ dotfiles checkout
 
 # we only want to add files deliberately
 dotfiles config status.showUntrackedFiles no
-
-# install our brew packages
-brew bundle
