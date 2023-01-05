@@ -8,6 +8,7 @@ brew bundle --file=.bin/Brewfiles
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install files from our git repo
+git clone --bare https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
 function dotfiles {
 	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }

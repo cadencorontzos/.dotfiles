@@ -14,7 +14,7 @@ Go to the home directory
 
 First, pull the install script using wget
 ```
-	wget https://raw.githubusercontent.com/cadencorontzos/dotfiles/main/.bin/install.sh --output-file=install.sh
+	wget https://raw.githubusercontent.com/cadencorontzos/dotfiles/main/.bin/install.sh -O install.sh
 ```
 Now run the install script
 ```
