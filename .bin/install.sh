@@ -3,7 +3,7 @@
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install files from our git repo
-https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
 function dotfiles {
 	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
