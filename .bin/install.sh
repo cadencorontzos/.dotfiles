@@ -1,5 +1,6 @@
 # install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # install our brew packages
 brew bundle --file=.bin/Brewfiles
@@ -8,7 +9,7 @@ brew bundle --file=.bin/Brewfiles
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install files from our git repo
-git clone --bare https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
+https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
 function dotfiles {
 	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
