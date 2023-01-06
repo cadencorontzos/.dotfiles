@@ -25,3 +25,7 @@ brew bundle --file=.brewfiles/Brewfile
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# put our zshrc back and change default shell
+mv .zshrc.pre-oh-my-zsh .zshrc
+chsh -s $(which zsh)
