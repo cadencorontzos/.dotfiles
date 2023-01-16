@@ -2,6 +2,12 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# install our brew packages
+brew bundle --file=.brewfiles/Brewfile
+
+# install oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # install files from our git repo
 git clone --bare https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
 function dotfiles {
@@ -20,12 +26,5 @@ dotfiles checkout
 # we only want to add files deliberately
 dotfiles config status.showUntrackedFiles no
 
-# install our brew packages
-brew bundle --file=.brewfiles/Brewfile
-
-# install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# put our zshrc back and change default shell
-mv .zshrc.pre-oh-my-zsh .zshrc
+# change default shell
 chsh -s $(which zsh)
