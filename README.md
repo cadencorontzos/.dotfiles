@@ -5,7 +5,7 @@ This in my default shell configuration
 ## Installation
 
 Prerequisites
-* brew
+* git
 
 Go to the home directory
 ```
@@ -20,7 +20,7 @@ Now run the install script
 ```
 	bash install.sh
 ```
-It's that easy.
+It's that easy. You may have to restart/logout if bash was your default before.
 
 ## Uninstall
 
