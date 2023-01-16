@@ -43,6 +43,11 @@ else
   endif
 endif
 
+" Stop leaving these temp files everywhere
+set backupdir=~/.vimtmp//,.
+set directory=~/.vimtmp//,.
+
+
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
   set hlsearch
