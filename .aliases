@@ -1,7 +1,6 @@
 alias zshrc='vim ~/.zshrc'
 alias rezsh='source ~/.zshrc'
-alias coding='cd /mnt/c/Users/ccbal/coding'
-alias p='ssh cadwcoron@patty.reed.edu'
+alias coding='cd ~/coding'
 alias vimrc='vim ~/.vimrc'
 alias zshal='vim ~/.aliases'
 alias g='git'
