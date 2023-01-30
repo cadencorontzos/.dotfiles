@@ -5,6 +5,13 @@ tap "homebrew/core"
 brew "zsh"
 brew "git"
 
+# programming tools
+brew "python3"
+brew "ruby"
+brew "node"
+brew "nvm"
+brew "yarn"
+
 # some fun command line tools 
 brew "cowsay"
 brew "sl"

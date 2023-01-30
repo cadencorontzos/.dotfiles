@@ -5,6 +5,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # install our brew packages
 brew bundle --file=.brewfiles/Brewfile
 
+# if they want us to, install the mac casks
+if [ $1 = "mac"]; then
+	brew bundle --file=brewfiles/Brewfile_mac
+fi;
+
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
