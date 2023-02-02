@@ -1,7 +1,0 @@
-alias zshrc='vim ~/.zshrc'
-alias rezsh='source ~/.zshrc'
-alias coding='cd ~/coding'
-alias vimrc='vim ~/.vimrc'
-alias zshal='vim ~/.aliases'
-alias g='git'
-alias dfs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

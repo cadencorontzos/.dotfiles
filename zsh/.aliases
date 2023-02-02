@@ -1,0 +1,6 @@
+alias zshrc='nvim ~/.zshrc'
+alias rezsh='source ~/.zshrc'
+alias coding='cd ~/coding'
+alias vimrc='nvim ~/.config/nvim/init.vim'
+alias zshal='nvim ~/.aliases'
+alias g='git'
