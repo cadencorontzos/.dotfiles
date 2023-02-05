@@ -15,6 +15,9 @@ nix-env -iA \
 	nixpkgs.python3 \
 	nixpkgs.ruby \
 
+# install oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+rm .zshrc
 
 # stow all our dotfiles
 for folder in */; do 
