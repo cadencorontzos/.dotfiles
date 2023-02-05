@@ -1,35 +1,29 @@
-# install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# install nix
+curl -L https://nixos.org/nix/install | sh
 
-# install our brew packages
-brew bundle --file=.brewfiles/Brewfile
+# source nix
+. ~/.nix-profile/etc/profile.d/nix.sh
 
-# if they want us to, install the mac casks
-if [ $1 = "mac"]; then
-	brew bundle --file=brewfiles/Brewfile_mac
-fi;
+# install packages
+nix-env -iA \
+	nixpkgs.zsh \
+	nixpkgs.git \
+	nixpkgs.vim \
+	nixpkgs.neovim \
+	nixpkgs.stow \
+	nixpkgs.rustup \
+	nixpkgs.python3 \
+	nixpkgs.ruby \
 
-# install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# install files from our git repo
-git clone --bare https://github.com/cadencorontzos/dotfiles.git $HOME/.dotfiles
-function dotfiles {
-	/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
-}
-mkdir -p .dotfiles-backup
-dotfiles checkout
-if [ $? = 0 ]; then
-	echo "Checked out dotfiles. ";
-else
-	echo "Backing up pre-existing dotfiles.";
-	dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
-fi;
-dotfiles checkout
+# stow all our dotfiles
+for folder in */; do 
+	stow $folder
+done
 
-# we only want to add files deliberately
-dotfiles config status.showUntrackedFiles no
+# add zsh as a login shell
+command -v zsh | sudo tee -a /etc/shells
 
-# change default shell
-chsh -s $(which zsh)
+# use zsh as default shell
+sudo chsh -s $(which zsh) $USER
+zsh

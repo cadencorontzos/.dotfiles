@@ -7,21 +7,18 @@ This in my default shell configuration
 Prerequisites
 * git
 
-Go to the home directory
+Go to your home directory
 ```
 	cd $HOME
 ```	
+and run the install script
 
-First, pull the install script using wget
 ```
-	wget https://raw.githubusercontent.com/cadencorontzos/dotfiles/main/.bin/install.sh -O install.sh
+	cd .dotfiles
+	sh install.sh
 ```
-Now run the install script
-```
-	bash install.sh
-```
-It's that easy. You may have to restart/logout if bash was your default before.
 
-## Uninstall
+### Stow 
 
-Upon installation, any conflicting files will be moved to `$HOME/.dotfiles-backup
+There may be issues with the symlinks if you already have some of the dotfiles with the same names in your home directory. If this happens, back up the files it complains about and try again.
+
