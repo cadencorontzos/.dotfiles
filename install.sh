@@ -17,7 +17,7 @@ nix-env -iA \
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm .zshrc
+rm ~/.zshrc
 
 # stow all our dotfiles
 for folder in */; do 
