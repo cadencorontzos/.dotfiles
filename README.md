@@ -1,6 +1,8 @@
-# Test
+# Dotfiles 
 
-This in my default shell configuration
+These are some of my config files for Unix-like systems.
+
+I use a zsh terminal with oh-my-zsh and neovim with several plugins.
 
 ## Installation
 
@@ -11,7 +13,7 @@ Go to your home directory
 ```
 	cd $HOME
 ```	
-and run the install script
+and clone this repo. Go into the project directory (`$HOME/.dotfiles`) and run the install script
 
 ```
 	cd .dotfiles
