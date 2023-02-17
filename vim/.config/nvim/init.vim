@@ -28,12 +28,12 @@ nmap <C-h> <C-w>h
 nmap th gT
 nmap tl gt
 nmap <leader>n <C-w>T
-nmap <leader>f :NERDTreeToggle<CR>
 
 " terminal mappings
 tnoremap <Esc> <C-\><C-n>
 nmap <leader>t :FloatermToggle<CR>
 nmap <leader>nt :FloatermNew<CR>
+nmap <leader>d :NERDTreeToggle<CR>
 
 " searches
 map <leader>h :noh<CR>
