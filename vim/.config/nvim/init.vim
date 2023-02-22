@@ -51,6 +51,8 @@ Plug 'kyazdani42/nvim-web-devicons'  "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " c++ autocomplete
 Plug 'preservim/nerdtree'  " File explorer
 Plug 'voldikss/vim-floaterm'  " toggle terminal 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
 
 call plug#end()
 

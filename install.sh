@@ -14,15 +14,14 @@ nix-env -iA \
 	nixpkgs.rustup \
 	nixpkgs.python3 \
 	nixpkgs.ruby \
+	nixpkgs.ripgrep \
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm ~/.zshrc
 
-# stow all our dotfiles
-for folder in */; do 
-	stow $folder
-done
+# stow folders
+sh link_folders.sh
 
 # add zsh as a login shell
 command -v zsh | sudo tee -a /etc/shells
