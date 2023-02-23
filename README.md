@@ -25,7 +25,7 @@ sh install.sh
 If you want to update your files, run 
 
 ```
-git pull && sh link_folders.sh
+git pull && sh .scripts/link_folders.sh
 ```
 
 There may be issues with the symlinks if you already have some of the dotfiles with the same names in your home directory. If this happens, back up the files it complains about and try again.
@@ -35,6 +35,6 @@ There may be issues with the symlinks if you already have some of the dotfiles w
 If you don't have the proper fonts installed, 
 
 ```
-sh fonts.sh
+sh .scripts/fonts.sh
 ```
 

@@ -5,24 +5,14 @@ curl -L https://nixos.org/nix/install | sh
 . ~/.nix-profile/etc/profile.d/nix.sh
 
 # install packages
-nix-env -iA \
-	nixpkgs.zsh \
-	nixpkgs.git \
-	nixpkgs.vim \
-	nixpkgs.neovim \
-	nixpkgs.stow \
-	nixpkgs.rustup \
-	nixpkgs.python3 \
-	nixpkgs.ruby \
-	nixpkgs.ripgrep \
-	nixpkgs.nodejs  \
+sh .scripts/install_pacakges.sh
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm ~/.zshrc
 
 # stow folders
-sh link_folders.sh
+sh .scripts/link_folders.sh
 
 # add zsh as a login shell
 command -v zsh | sudo tee -a /etc/shells
