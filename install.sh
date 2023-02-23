@@ -5,7 +5,7 @@ curl -L https://nixos.org/nix/install | sh
 . ~/.nix-profile/etc/profile.d/nix.sh
 
 # install packages
-sh .scripts/install_pacakges.sh
+sh .scripts/install_packages.sh
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
