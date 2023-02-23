@@ -22,5 +22,19 @@ and clone this repo. Go into the project directory (`$HOME/.dotfiles`) and run t
 
 ### Stow 
 
+If you want to update your files, run 
+
+```
+git pull && sh link_folders.sh
+```
+
 There may be issues with the symlinks if you already have some of the dotfiles with the same names in your home directory. If this happens, back up the files it complains about and try again.
+
+## Fonts
+
+If you don't have the proper fonts installed, 
+
+```
+sh fonts.sh
+```
 
