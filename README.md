@@ -28,7 +28,7 @@ If you want to update your files, run
 git pull && sh .scripts/link_folders.sh
 ```
 
-There may be issues with the symlinks if you already have some of the dotfiles with the same names in your home directory. If this happens, back up the files it complains about and try again.
+There may be issues with the symlinks if you already have some of the dotfiles with the same names in your home directory. If this happens, back up the files it complains about to a `~/.backup` directory and try linking folders again.
 
 ## Fonts
 
