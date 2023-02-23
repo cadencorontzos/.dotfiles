@@ -11,16 +11,16 @@ Prerequisites
 
 Go to your home directory
 ```
-	cd $HOME
+cd $HOME
 ```	
 and clone this repo. Go into the project directory (`$HOME/.dotfiles`) and run the install script
 
 ```
-	cd .dotfiles
-	sh install.sh
+cd .dotfiles
+sh install.sh
 ```
 
-### Stow 
+## Stow 
 
 If you want to update your files, run 
 
