@@ -8,3 +8,8 @@ nix-env -iA \
 	nixpkgs.python3 \
 	nixpkgs.ruby \
 	nixpkgs.ripgrep \
+	nixpkgs.nodejs \
+	nixpkgs.yarn \
+	nixpkgs.pandoc \
+	nixpkgs.texlive.combined.scheme-small \
+	
