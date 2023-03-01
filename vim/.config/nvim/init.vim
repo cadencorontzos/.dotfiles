@@ -35,6 +35,8 @@ nmap <leader>t :FloatermToggle<CR>
 nmap <leader>nt :FloatermNew<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 
+nmap <leader>b :TagbarToggle<CR>
+nmap <leader>md :MarkdownPreviewToggle<CR>
 " searches
 map <leader>h :noh<CR>
 
@@ -61,6 +63,8 @@ Plug 'voldikss/vim-floaterm'  " toggle terminal
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'tpope/vim-commentary'
+Plug 'preservim/tagbar'
 
 call plug#end()
 
