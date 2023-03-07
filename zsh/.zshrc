@@ -9,3 +9,6 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+# source nix
+if [ -e /home/caden/.nix-profile/etc/profile.d/nix.sh ]; then . /home/caden/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
