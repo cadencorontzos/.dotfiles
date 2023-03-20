@@ -12,4 +12,6 @@ nix-env -iA \
 	nixpkgs.yarn \
 	nixpkgs.pandoc \
 	nixpkgs.texlive.combined.scheme-small \
-	
+	nixpkgs.zsh-syntax-highlighting \
+	nixpkgs.oh-my-zsh \
+	nixpkgs.tmux 
