@@ -3,5 +3,7 @@
 	"markdownlint.config": {
 		"default": true,
 		"line-length": false
-	}
+	},
+
+	"coc.preferences.formatOnSaveFiletypes": ["*"]
 }
